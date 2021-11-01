@@ -4,55 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Swedbank homework</title>
+    <link rel="shortcut icon" type="image/jpg" href="swedbank_favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
+    <div class="content">
         <div id="question-nav">
-            <div id="btn-1" onclick="goTo(1)">Question 1</div>
-            <div id="btn-2" onclick="goTo(2)">Question 2</div>
-            <div id="btn-3" onclick="goTo(3)">Question 3</div>
-            <div id="btn-4" onclick="goTo(4)">Question 4</div>
-            <div id="btn-5" onclick="goTo(5)">Question 5</div>
+            <div id="btn-1" onclick="goTo(1)">1</div>
+            <div id="btn-2" onclick="goTo(2)">2</div>
+            <div id="btn-3" onclick="goTo(3)">3</div>
+            <div id="btn-4" onclick="goTo(4)">4</div>
+            <div id="btn-5" onclick="goTo(5)">5</div>
         </div>
+        <div id="error" class="error">Error Lorem ipsum dolor sit amet consectetur.</div>
         <div id="intro" class="container">
             <h1>Intro</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, magni.</p>
-        </div>
+        </div>  
         <div id="q1" class="container">
             <h1>Question 1</h1>
-            <input type="checkbox" name="q-1">
+            <div class="flex">
+                <label class="question" for="q-1"></label>
+                <input type="checkbox" name="q-1">
+                <div class="tooltip-container">
+                    <div class="tooltip-icon">?</div>
+                    <div class="tooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nihil? Lorem ipsum dolor sit amet.</div>
+                </div>
+            </div>
         </div>
         <div id="q2" class="container">
             <h1>Question 2</h1>
-            <input type="radio" name="q-2" value="1">
-            <input type="radio" name="q-2" value="2">
-            <input type="radio" name="q-2" value="3">
+            <div class="question bold"></div>
+            <div class="flex">
+                <div class="flex-column">
+                    <div>
+                        <label for="q-2">Lorem ipsum dolor sit amet.</label>
+                        <input type="radio" name="q-2" value="1"></div>
+                    <div>
+                        <label for="q-2">Lorem ipsum dolor sit amet.</label>
+                        <input type="radio" name="q-2" value="2">
+                    </div>
+                    <div>
+                        <label for="q-2">Lorem ipsum dolor sit amet.</label>
+                        <input type="radio" name="q-2" value="3">
+                    </div>
+                </div>
+            </div>            
         </div>
         <div id="q3" class="container">
             <h1>Question 3</h1>
-            <select name="q-3" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
+            <div class="flex">
+                <label class="question" for="q-3"></label>
+                <select class="input" name="q-3" id="cars">
+                    <option value="Lorem">Lorem</option>
+                    <option value="Lorem, ipsum">Lorem, ipsum</option>
+                    <option value="Lorem lorem">Lorem lorem</option>
+                    <option value="Lorem ipsum">Lorem ipsum</option>
+                </select>
+                <div class="tooltip-container">
+                    <div class="tooltip-icon">?</div>
+                    <div class="tooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos, amet laborum corrupti dignissimos illum eum exercitationem esse maxime asperiores voluptate reprehenderit debitis commodi beatae? Quaerat praesentium quam ab tenetur?</div>
+                </div>
+            </div>
         </div>
         <div id="q4" class="container">
             <h1>Question 4</h1>
-            <textarea name="q-4" cols="30" rows="10"></textarea>
+            <div class="flex-column">
+                <label class="question"></label>
+                <textarea class="input textarea" name="q-4" cols="30" rows="10"></textarea>
+            </div>
         </div>
         <div id="q5" class="container">
             <h1>Question 5</h1>
-            <input type="text" name="q-5">
+            <div class="flex">
+                <label class="question" for="q-5"></label>
+                <div class="tooltip-container">
+                    <div class="tooltip-icon">?</div>
+                    <div class="tooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos, amet laborum corrupti dignissimos illum eum exercitationem esse maxime asperiores voluptate reprehenderit debitis commodi beatae? Quaerat praesentium quam ab tenetur?</div>
+                </div>
+                <input class="input" type="number" name="q-5"> €
+            </div>
         </div>
         <div id="summary" class="container">
             <h1>Summary</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, magni.</p>
+            <div id="answer-1">Some question here: </div>
+            <div id="answer-2">Some question here: </div>
+            <div id="answer-3">Some question here: </div>
+            <div id="answer-4">Some question here: </div>
+            <div id="answer-5">Some question here: </div>
         </div>
-        <button id="prev" onclick="goBack()">Prev</button>
-        <button id="next" onclick="goNext()">Next</button>
+        <div class="flex justify-between">
+            <button id="prev" onclick="goBack()">Prev</button>
+            <button id="next" onclick="goNext()">Next</button>
+        </div>
+        
     </div>
     <script src="scripts.js"></script>
 </body>
